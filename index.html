@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点图插件</title>
+	<style type="text/css">
+		*{margin:0;padding: 0;}
+		li{list-style: none;}
+		.banner{height: 440px;overflow: hidden;margin:130px auto;}
+		.picture{height: 360px;overflow: hidden;}
+		.picture li{position: relative;}
+		.picture li p{
+			width: 100%;height: 100px;position: absolute;padding: 20px 40px;
+			left: 0;top: 0;font-size: 20px;color: #fff;
+		}
+		.picture li strong{
+			display: block;position: absolute;bottom: 4px;height: 50px;line-height: 50px;background-color: rgba(0,0,0,.3);
+			width: 100%;color: #fff;text-align: center;
+		}
+		.num{height: 40px;width: 210px;margin:40px auto;}
+		.num li{
+			float:left;width: 40px;height:40px;text-indent: -9999px;background-color: #ccc;
+			border-radius: 50px;cursor: pointer;
+		}
+		.num li.on{background-color: red;}
+		.num li:not(:last-child){margin-right: 15px;}
+		.direction .arrows_left,.direction .arrows_right{position: relative;top: -220px;cursor: pointer;}
+		.direction .arrows_left{float:left;width: 100px;height:100px;background:url(static/image/left.png) right center no-repeat;}
+		.direction .arrows_right{float:right;width: 100px;height:100px;background:url(static/image/right.png) right -25px center no-repeat;}
+	</style>
+</head>
+<body>
+	<div class="banner" id="banner">
+		<ul class="picture">
+			<li><img src="static/image/1.jpg" alt="图一" title="美食一"></li>
+			<li><img src="static/image/2.jpg" alt="图二" title="美食二"></li>
+			<li><img src="static/image/3.jpg" alt="图三" title="美食三"></li>
+			<li><img src="static/image/4.jpg" alt="图四" title="美食四"></li>
+		</ul>
+	</div>
+	<script src="static/js/jquery-1.8.3.min.js"></script>
+	<script src="static/js/jquery.focus.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#banner").myPlugin();
+		});
+	</script>
+</body>
+</html>
