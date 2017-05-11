@@ -6,18 +6,24 @@
 	<style type="text/css">
 		*{margin:0;padding: 0;}
 		li{list-style: none;}
-		.banner{height: 440px;overflow: hidden;margin:130px auto;}
-		.picture{height: 360px;overflow: hidden;}
-		.picture li{position: relative;}
+		.maoFocus{height: 480px;margin:110px auto;width: 100%;}
+		.picture{height:360px;width: 100%;overflow:hidden;}
+		.picture li{
+			position: relative;width:100%;height: 100%;
+			background-size: cover;background-position:center;
+		}
+		.picture li a{display: block;}
+		.picture li a img{min-height: 360px;overflow: hidden;}
 		.picture li p{
-			width: 100%;height: 100px;position: absolute;padding: 20px 40px;
-			left: 0;top: 0;font-size: 20px;color: #fff;
+			height: 40px;position: absolute;padding: 20px 140px;
+			top: 0;font-size: 20px;
 		}
 		.picture li strong{
-			display: block;position: absolute;bottom: 4px;height: 50px;line-height: 50px;background-color: rgba(0,0,0,.3);
-			width: 100%;color: #fff;text-align: center;
+			display: block;position: absolute;height: 50px;line-height: 50px;
+			background-color: rgba(0,0,0,.3);width: 100%;top: 310px;
+			color: #fff;text-align: center;
 		}
-		.num{margin:40px auto;display: table;padding: 0 10px;}
+		.num{margin:80px auto 0;display: table;}
 		.num li{
 			width:40px;height:40px;text-indent: -9999px;background-color: #ccc;
 			border-radius: 50px;cursor: pointer;float: left; 
@@ -25,25 +31,31 @@
 		.num li.on{background-color: red;}
 		.num li:not(:last-child){margin-right: 15px;}
 		.direction .arrows_left,.direction .arrows_right{position: relative;top: -220px;cursor: pointer;}
-		.direction .arrows_left{float:left;width: 100px;height:100px;background:url(static/image/left.png) right center no-repeat;}
-		.direction .arrows_right{float:right;width: 100px;height:100px;background:url(static/image/right.png) right -25px center no-repeat;}
+		.direction .arrows_left{
+			float:left;width: 100px;height:100px;
+			background:url(static/image/left.png) right center no-repeat;
+		}
+		.direction .arrows_right{
+			float:right;width: 100px;height:100px;
+			background:url(static/image/right.png) right -25px center no-repeat;
+		}
 	</style>
 </head>
 <body>
-	<div class="banner" id="banner">
+	<div class="maoFocus" id="maoFocus">
 		<ul class="picture">
-			<li><img src="static/image/1.jpg" alt="图一" title="美食一"></li>
-			<li><img src="static/image/2.jpg" alt="图二" title="美食二"></li>
-			<li><img src="static/image/3.jpg" alt="图三" title="美食三"></li>
-			<li><img src="static/image/4.jpg" alt="图四" title="美食四"></li>
-			<li><img src="static/image/4.jpg" alt="图四" title="美食四"></li>
+			<li><a href=""><img src="static/image/1.jpg" alt="图一" title="美食一"></a></li>
+			<li><a href=""><img src="static/image/2.jpg" alt="图二" title="美食二"></a></li>
+			<li><a href=""><img src="static/image/3.jpg" alt="图三" title="美食三"></a></li>
+			<li><a href=""><img src="static/image/4.jpg" alt="图四" title="美食四"></a></li>
+			<li><a href=""><img src="static/image/5.jpg" alt="图五" title="美食五"></a></li>
 		</ul>
 	</div>
 	<script src="static/js/jquery-1.8.3.min.js"></script>
 	<script src="static/js/jquery.focus.js"></script>
 	<script type="text/javascript">
 		$(function() {
-			$("#banner").myPlugin();
+			$("#maoFocus").myPlugin();
 		});
 	</script>
 </body>
